@@ -54,12 +54,12 @@ resource "aws_instance" "user-1" {
     ami = "ami-0341d95f75f311023"
     instance_type = "t3.micro"
     subnet_id = data.aws_subnet.mySubnet.id
-    security_groups = [aws_security_group.efs_sg.id]
+    vpc_security_group_ids = [aws_security_group.efs_sg.id]
 }
 
 resource "aws_instance" "user-2" {
     ami = "ami-0341d95f75f311023"
     instance_type = "t3.micro"
     subnet_id = data.aws_subnet.mySubnet.id
-    security_groups = [aws_security_group.efs_sg.id]
+    vpc_security_group_ids = [aws_security_group.efs_sg.id]
 }
